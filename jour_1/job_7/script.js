@@ -7,3 +7,32 @@ $jour $mois $année est un jour travaillé”.
 $jour correspond au numéro du jour, $mois au mois et $année à l’année. Les jours fériés
 sont référencés sur
 */
+function jourTravaille() {
+  var jour = date.getDate();
+  var mois = date.getMonth() + 1;
+  var annee = date.getFullYear();
+  var jourFerie = [
+    "01/01",
+    "13/04",
+    "01/05",
+    "08/05",
+    "21/05",
+    "01/06",
+    "14/07",
+    "15/08",
+    "01/11",
+    "11/11",
+    "25/12",
+  ];
+  if (
+    jourFerie.includes(`${jour}/${mois}`) ||
+    date.getDay() === 0 ||
+    date.getDay() === 6
+  ) {
+    console.log(
+      `Non, ${jour} ${mois} ${annee} est un jour férié ou un week-end.`
+    );
+  } else {
+    console.log(`Oui, ${jour} ${mois} ${annee} est un jour travaillé.`);
+  }
+}
