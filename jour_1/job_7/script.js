@@ -36,3 +36,5 @@ function jourTravaille() {
     console.log(`Oui, ${jour} ${mois} ${annee} est un jour travaillé.`);
   }
 }
+var dateTest = new Date(2020, 0, 1); // 1er Janvier 2020
+jourTravaille(dateTest);
