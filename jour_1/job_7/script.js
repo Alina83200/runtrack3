@@ -7,7 +7,7 @@ $jour $mois $année est un jour travaillé”.
 $jour correspond au numéro du jour, $mois au mois et $année à l’année. Les jours fériés
 sont référencés sur
 */
-function jourTravaille() {
+function jourTravaille(date) {
   var jour = date.getDate();
   var mois = date.getMonth() + 1;
   var annee = date.getFullYear();
