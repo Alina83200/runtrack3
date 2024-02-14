@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+    <title>Scroll Color Change</title>
 </head>
 
 <body>
-    
+    <div class="content">
+
+    </div>
+    <div class="footer">
+
+    </div>
     <script src="script.js"></script>
 </body>
 
