@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style4.css">
 </head>
+
 <body>
-    
+<script>
+    function loadStyleSheet() {
+        var width = window.innerWidth;
+        var styleLink = document.getElementById('style-link');
+
+        if (width >= 1280 && width <= 1680) {
+            styleLink.href = 'style3.css';
+        } else if (width >= 1681 && width <= 1920) {
+            styleLink.href = 'style2.css';
+        } else {
+            styleLink.href = 'style4.css';
+        }
+    }
+
+    loadStyleSheet();
+    window.addEventListener('resize', function () {
+        loadStyleSheet();
+    });
+</script>
 </body>
+
 </html>
