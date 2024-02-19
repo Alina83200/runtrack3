@@ -10,28 +10,34 @@
 
 <body>
     <script>
+        function loadCSS(style) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = style;
+            document.head.appendChild(link);
+        }
         function adBackgroundColor() {
             var width = window.innerWidth;
-            var styleLink = document.getElementById('style-link');
-            var body = document.body
-
+            
+        
             if (width >= 1680 && width <= 1920) {
                 document.body.style.backgroundColor = "#ffca4b";
             } else if (width >= 1280 && width <= 1680) {
                 document.body.style.background = "#275fa0";
             }
-            else if (width <= 1280) {
+            else if(width <= 1280){
                 document.body.style.background = "#ffffff";
-            } else {
-                styleLink.href = 'style.css';
             }
-
+            else {
+                loadCSS('style.css');
+            }
         }
-        adBackgroundColor();
-
-        window.addEventListener('resize', function () {
+            loadCSS('style.css');
             adBackgroundColor();
-        });
+
+            window.addEventListener('resize', function () {
+                adBackgroundColor();
+            });
     </script>
 </body>
 
