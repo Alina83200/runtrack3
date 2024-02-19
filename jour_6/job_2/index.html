@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <script>
+        function adBackgroundColor() {
+            var width = window.innerWidth;
+            var styleLink = document.getElementById('style-link');
+            var body = document.body
+
+            if (width >= 1680 && width <= 1920) {
+                document.body.style.backgroundColor = "#ffca4b";
+            } else if (width >= 1280 && width <= 1680) {
+                document.body.style.background = "#275fa0";
+            }
+            else if (width <= 1280) {
+                document.body.style.background = "#ffffff";
+            } else {
+                styleLink.href = 'style.css';
+            }
+
+        }
+        adBackgroundColor();
+
+        window.addEventListener('resize', function () {
+            adBackgroundColor();
+        });
+    </script>
 </body>
+
 </html>
